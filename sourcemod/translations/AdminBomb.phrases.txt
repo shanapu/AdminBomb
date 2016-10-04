@@ -1,0 +1,19 @@
+"Phrases"
+{
+	"adminbomb_tag"
+	{
+		"en"		"[{green}AdminBomb{default}]"
+	}
+	
+	"adminbomb_disabled"
+	{
+		"en"		"The Admin Bomb is{green}disabled{default}"
+	}
+	
+	"adminbomb_choose"
+	{
+		"en"		"Choose a player:"
+	}
+
+
+}
