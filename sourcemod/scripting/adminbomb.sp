@@ -149,7 +149,7 @@ public Action AdminCommand_Bomb(int client, int args)
 		Menu hMenu = CreateMenu(ViewQueueMenuHandle);
 		
 		char menuinfo[64];
-		Format(menuinfo, sizeof(menuinfo), "t", "ratio_remove", client);
+		Format(menuinfo, sizeof(menuinfo), "t", "adminbomb_choose", client);
 		SetMenuTitle(hMenu, menuinfo);
 		
 		for (int i = 1; i <= MaxClients; ++i)
@@ -188,10 +188,7 @@ public int ViewQueueMenuHandle(Menu hMenu, MenuAction action, int client, int op
 		hMenu.GetItem(option, info, sizeof(info));
 		int user = GetClientOfUserId(StringToInt(info)); 
 		
-		BlowUpClient(user);
-		
-		CPrintToChatAll("%t %t", "ratio_tag", "ratio_removed", client, user);
-		
+		BlowUpClient(user);		
 	}
 	else if (action == MenuAction_End)
 	{
